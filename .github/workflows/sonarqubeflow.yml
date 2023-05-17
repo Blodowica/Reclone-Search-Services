@@ -44,5 +44,5 @@ jobs:
         shell: powershell
         run: |
           .sonar/scanner/dotnet-sonarscanner begin /k:"Blodowica_Reclone-Search-Services" /o:"blodowica" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build ./Reclone-Search-Service/Reclone-Search-Service/Reclone-Search-Service.csproj --no-restore --no-incremental
+          dotnet build ./School/Semester 6/Individual Project/Reclone-Search-Services/Reclone-Search-Service/Reclone-Search-Service/Reclone-Search-Service.csproj --no-restore --no-incremental
           .sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
