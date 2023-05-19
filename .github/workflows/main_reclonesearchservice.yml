@@ -29,6 +29,7 @@ jobs:
 
       - name: Publish with dotnet
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        working-directory: ./Reclone-Search-Service
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
