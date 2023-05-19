@@ -80,7 +80,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           .sonar/scanner/dotnet-sonarscanner begin /k:"Blodowica_Reclone-Search-Services" /o:"blodowica" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build ./Reclone-Search-Service/Reclone-Search-Service/Reclone-Search-Service.csproj --no-incremental
+          dotnet build Reclone-Search-Service/Reclone-Search-Service/Reclone-Search-Service.csproj --no-incremental
           .sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
   deploy:
